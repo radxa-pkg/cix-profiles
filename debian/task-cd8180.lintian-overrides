@@ -1,0 +1,5 @@
+# Small bug number is very probable for us.
+task-cd8180: improbable-bug-number-in-closes
+
+# GPU driver needs to access this device from unprivileged environment.
+task-cd8180: appstream-metadata-missing-modalias-provide

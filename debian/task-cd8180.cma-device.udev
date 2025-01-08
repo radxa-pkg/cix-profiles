@@ -1,0 +1,1 @@
+ACTION=="add" SUBSYSTEM=="dma_heap" KERNEL=="linux,cma" TAG+="uaccess"
