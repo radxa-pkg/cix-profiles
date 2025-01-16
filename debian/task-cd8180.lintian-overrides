@@ -3,3 +3,6 @@ task-cd8180: improbable-bug-number-in-closes
 
 # GPU driver needs to access this device from unprivileged environment.
 task-cd8180: appstream-metadata-missing-modalias-provide
+
+# We have to adjust repo priority to properly install vendor packages
+task-cd8180: package-installs-apt-preferences

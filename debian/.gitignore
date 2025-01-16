@@ -5,3 +5,4 @@
 /*.debhelper.log
 /*.postrm.debhelper
 /*.substvars
+/tmp

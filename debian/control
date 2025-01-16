@@ -6,6 +6,7 @@ Standards-Version: 4.6.0
 Build-Depends: debhelper (>=12~),
                devscripts,
                lintian,
+               dh-exec,
 
 Package: task-cd8180
 Architecture: all
@@ -15,6 +16,7 @@ Depends: cix-gpu-umd,
          cix-gpu-driver,
          cix-mesa,
          cix-xserver,
+         cix-libglvnd,
          ${misc:Depends},
 Description: Metapackages for common CD8180 vendor packages
  This package provides prebuilt packages from Cix that

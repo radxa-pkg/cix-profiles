@@ -1,1 +1,4 @@
+#!/usr/bin/env dh-exec
+
+apt/radxa-cd8180 => /etc/apt/preferences.d/radxa-cd8180
 src/usr /
