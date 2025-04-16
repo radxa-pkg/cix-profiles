@@ -1,0 +1,1 @@
+ACTION=="add" SUBSYSTEM=="video4linux" ENV{ID_V4L_PRODUCT}=="Linlon Video device" ENV{DEVLINKS}=="/dev/v4l/by-path/*-video-index0" SYMLINK+="video-cixdec0"

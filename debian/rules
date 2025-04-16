@@ -11,3 +11,4 @@ override_dh_builddeb:
 
 override_dh_installudev:
 	dh_installudev -ptask-cd8180 --name=cma-device --priority=99
+	dh_installudev -ptask-cd8180 --name=video-cixdec0 --priority=99
