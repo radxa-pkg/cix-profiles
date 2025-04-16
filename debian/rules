@@ -11,6 +11,3 @@ override_dh_builddeb:
 
 override_dh_installudev:
 	dh_installudev -ptask-cd8180 --name=cma-device --priority=99
-
-override_dh_installsystemd:
-	dh_installsystemd --name=radxa-patch-module
