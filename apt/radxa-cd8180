@@ -5,3 +5,11 @@ Pin-Priority: 1001
 Package: libmutter-11-0
 Pin: release a=cd8180-bookworm-test
 Pin-Priority: 1001
+
+Package: chromium*
+Pin: release a=cd8180-bookworm
+Pin-Priority: 1001
+
+Package: chromium*
+Pin: release a=cd8180-bookworm-test
+Pin-Priority: 1001
