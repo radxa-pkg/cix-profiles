@@ -8,16 +8,87 @@ Build-Depends: debhelper (>=12~),
                lintian,
                dh-exec,
 
-Package: task-cd8180
+Package: task-cix-chromium
+Architecture: all
+Priority: optional
+Depends: chromium,
+         ${misc:Depends},
+Description: Metapackages for CIX Chromium port
+ This package provides CIX Chromium port and
+ several important dependencies.
+
+Package: task-cix-drm
+Architecture: all
+Priority: optional
+Depends: cix-libdrm,
+         ${misc:Depends},
+Description: Metapackages for CIX DRM
+ This package provides CIX DRM.
+
+Package: task-cix-gstreamer
+Architecture: all
+Priority: optional
+Depends: cix-gstreamer,
+         ${misc:Depends},
+Description: Metapackages for CIX DRM
+ This package provides CIX DRM.
+
+Package: task-cix-gpu
 Architecture: all
 Priority: optional
 Depends: cix-gpu-umd,
-         cix-tools,
-         cix-gpu-driver,
          cix-mesa,
-         cix-xserver,
          cix-libglvnd,
+         cix-gpu-driver,
          ${misc:Depends},
+Description: Metapackages for CIX GPU
+ This package provides CIX GPU.
+
+Package: task-cix-npu
+Architecture: all
+Priority: optional
+Depends: cix-llama-cpp,
+         cix-mnn,
+         cix-npu-onnxruntime,
+         cix-npu-driver,
+         ${misc:Depends},
+Recommends: cix-noe-umd,
+            cix-npu-umd,
+Description: Metapackages for CIX NPU
+ This package provides CIX NPU.
+
+Package: task-cix-isp
+Architecture: all
+Priority: optional
+Depends: cix-isp-driver,
+         cix-isp-driver-v4l2,
+         cix-csidma-driver,
+         ${misc:Depends},
+Recomments: cix-isp-umd,
+Description: Metapackages for CIX ISP
+ This package provides CIX ISP.
+
+Package: task-cix-vpu
+Architecture: all
+Priority: optional
+Depends: cix-vpu-driver,
+         cix-vpu-test,
+         ${misc:Depends},
+Description: Metapackages for CIX VPU
+ This package provides CIX VPU.
+
+Package: task-cd8180
+Architecture: all
+Priority: optional
+Depends: cix-drivers-dkms,
+         cix-common-misc,
+         ${misc:Depends},
+Recommends: task-cix-isp,
+            task-cix-gpu,
+            task-cix-npu,
+            task-cix-vpu,
+            task-cix-chromium,
+            task-cix-gstreamer,
 Description: Metapackages for common CD8180 vendor packages
  This package provides prebuilt packages from Cix that
  provides a more optimized user experience.
