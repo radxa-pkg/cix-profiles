@@ -13,6 +13,7 @@ Architecture: all
 Priority: optional
 Depends: chromium,
          ${misc:Depends},
+Provides: chromium-sandbox,
 Description: Metapackages for CIX Chromium port
  This package provides CIX Chromium port and
  several important dependencies.
