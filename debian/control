@@ -14,6 +14,7 @@ Priority: optional
 Depends: chromium,
          ${misc:Depends},
 Provides: chromium-sandbox,
+          chromium-common (= 135.0.7049.84-1~deb12u1),
 Description: Metapackages for CIX Chromium port
  This package provides CIX Chromium port and
  several important dependencies.
