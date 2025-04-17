@@ -1,3 +1,19 @@
+cix-profiles (0.3.0) stable; urgency=medium
+
+  [ ZHANG Yuntian ]
+  * fix: dkms driver package removes the need to patch binary modules
+  * feat: add task packages
+  * fix: CIX Chromium is older than Debian version
+  * fix: apt won't downgrade when recommended package chromium-sandbox is
+    installed but missing for older version
+  * fix: Debian chromium-common replaces older chromium packages, causing
+    incomplete downgrade
+  * fix: consistent video-cixdec0 linking for Chromium
+  * fix: prefer CIX gstreamer to Debian version
+  * fix: remove libmutter pin
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Thu, 17 Apr 2025 18:58:36 +0800
+
 cix-profiles (0.2.0) stable; urgency=medium
 
   [ ZHANG Yuntian ]
