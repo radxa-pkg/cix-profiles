@@ -1,3 +1,10 @@
+cix-profiles (0.3.1) noble; urgency=medium
+
+  [ ZHANG Yuntian ]
+  * chore: update chromium-common
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Mon, 28 Apr 2025 06:00:12 +0000
+
 cix-profiles (0.3.0) stable; urgency=medium
 
   [ ZHANG Yuntian ]
