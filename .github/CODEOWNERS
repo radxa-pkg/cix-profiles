@@ -1,1 +1,7 @@
-*           @RadxaYuntian
+# Catch-all code owner
+* @RadxaYuntian
+
+# Disown CI yaml so automerge c
+# https://github.com/orgs/commu
+.github/actions/**/*.yaml
+.github/workflows/*.yaml
