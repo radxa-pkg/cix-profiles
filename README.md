@@ -1,5 +1,9 @@
 # cix-profiles
 
-[![Build & Release](https://github.com/radxa-pkg/cix-profiles/actions/workflows/release.yml/badge.svg)](https://github.com/radxa-pkg/cix-profiles/actions/workflows/release.yml)
+[![Release](https://github.com/radxa-pkg/cix-profiles/actions/workflows/release.yaml/badge.svg)](https://github.com/radxa-pkg/cix-profiles/actions/workflows/release.yaml)
 
-Work-in-progress vendor-profiles package for Cix based devices.
+## Build
+
+1. `git clone --recurse-submodules https://github.com/radxa-pkg/cix-profiles.git`
+2. Open in [`devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers)
+3. `make deb`
