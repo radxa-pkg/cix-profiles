@@ -68,7 +68,7 @@ Depends: cix-isp-driver,
          cix-isp-driver-v4l2,
          cix-csidma-driver,
          ${misc:Depends},
-Recomments: cix-isp-umd,
+Recommends: cix-isp-umd,
 Description: Metapackages for CIX ISP
  This package provides CIX ISP.
 
