@@ -32,10 +32,13 @@ Description: Metapackages for CIX DRM
 Package: task-cix-gstreamer
 Architecture: all
 Priority: optional
-Depends: cix-gstreamer,
+Depends: cix-audio-dsp,
+         cix-gstreamer,
+         libfdk-aac2 | libfdk-aac2t64,
          ${misc:Depends},
-Description: Metapackages for CIX DRM
- This package provides CIX DRM.
+Recommends: cix-noe-umd,
+Description: Metapackages for CIX GStreamer
+ This package provides CIX GStreamer.
 
 Package: task-cix-gpu
 Architecture: all
