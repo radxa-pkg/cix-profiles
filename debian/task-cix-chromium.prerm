@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "remove" ] || [ "$1" = "deconfigure" ]; then
+    update-alternatives --remove \
+            x-www-browser \
+            /usr/bin/chromium
+
+    update-alternatives --remove \
+            gnome-www-browser \
+            /usr/bin/chromium
+    mv /usr/share/applications/gnome-mimeapps.list.bak /usr/share/applications/gnome-mimeapps.list
+fi
+
+#DEBHELPER#
+
+exit 0
