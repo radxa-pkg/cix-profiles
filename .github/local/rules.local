@@ -3,4 +3,4 @@ override_dh_installudev:
 	dh_installudev -ptask-cd8180 --name=video-cixdec0 --priority=99
 
 override_dh_installgsettings:
-	dh_installgsettings --priority=20
+	dh_installgsettings -ptask-cix-chromium --priority=20
