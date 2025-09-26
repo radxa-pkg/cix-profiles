@@ -1,0 +1,3 @@
+#!/usr/bin/env dh-exec
+
+src/usr/share usr/

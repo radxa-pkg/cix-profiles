@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+case $1 in
+    install|upgrade)
+        conflicts="
+        /usr/share/applications/gnome-mimeapps.list
+        "
+        for i in $conflicts
+        do
+            dpkg-divert --package task-cix-chromium --divert "$i.bak" --rename "$i"
+        done
+        ;;
+esac
+    
+#DEBHELPER#
+
+exit 0
