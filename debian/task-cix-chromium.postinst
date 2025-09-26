@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-remove" ]; then
+    # XFCE default browser alternative
+    update-alternatives --install \
+            /usr/bin/x-www-browser \
+            x-www-browser \
+            /usr/bin/chromium 100
+    # GNOME default browser alternative
+    update-alternatives --install \
+            /usr/bin/gnome-www-browser \
+            gnome-www-browser \
+            /usr/bin/chromium 100
+fi
+
+#DEBHELPER#
+
+exit 0
