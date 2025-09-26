@@ -13,6 +13,8 @@ if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-remov
             /usr/bin/gnome-www-browser \
             gnome-www-browser \
             /usr/bin/chromium 100
+elif [ "$1" = "triggered" ]; then
+    sed -i.bak 's/firefox-esr\.desktop/chromium.desktop;&/' /usr/share/applications/gnome-mimeapps.list
 fi
 
 #DEBHELPER#
