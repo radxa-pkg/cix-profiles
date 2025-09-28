@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    remove|upgrade)
+        if [ -f /usr/share/applications/gnome-mimeapps.list.bak ]; then
+            mv /usr/share/applications/gnome-mimeapps.list.bak /usr/share/applications/gnome-mimeapps.list
+        fi
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0

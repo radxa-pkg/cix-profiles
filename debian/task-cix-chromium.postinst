@@ -1,0 +1,26 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure|triggered)
+        # XFCE default browser alternative
+        update-alternatives --install \
+                /usr/bin/x-www-browser \
+                x-www-browser \
+                /usr/bin/chromium 100
+        # GNOME default browser alternative
+        update-alternatives --install \
+                /usr/bin/gnome-www-browser \
+                gnome-www-browser \
+                /usr/bin/chromium 100
+        # GNOME mimeapps list
+        if [ -f /usr/share/applications/gnome-mimeapps.list ]; then
+            sed -i.bak 's/=\(firefox-esr\.desktop\)/=chromium.desktop;\1/' /usr/share/applications/gnome-mimeapps.list
+        fi
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0
