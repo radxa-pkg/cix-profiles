@@ -1,3 +1,23 @@
+cix-profiles (0.3.2) noble; urgency=medium
+
+  [ ZHANG Yuntian ]
+  * fix: complete migration
+  * fix: include irqbalance to Recommends
+  * fix: add installudev rule
+  * fix: add extra gstreamer dependencies
+  * fix: workaround gst-plugin-scanner dead lock
+  * chore: update chromium-common
+
+  [ ZHANG Yuntiian ]
+  * feat: add irqbalance config
+  * fix: typo
+
+  [ Jiali Chen ]
+  * fix: use Chromium instead of Firefox for GNOME favorite-apps
+  * fix: set default browser for GNOME/XFCE to Chromium
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Tue, 21 Oct 2025 10:08:59 +0000
+
 cix-profiles (0.3.1) noble; urgency=medium
 
   [ ZHANG Yuntian ]
