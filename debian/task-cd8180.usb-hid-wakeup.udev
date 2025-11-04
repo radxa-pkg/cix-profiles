@@ -1,0 +1,2 @@
+# Enable Human Interface Device wakeup
+ACTION=="bind", SUBSYSTEM=="usb", ATTRS{bDeviceClass}=="00|03", TEST=="power/wakeup", ATTR{power/wakeup}="enabled"

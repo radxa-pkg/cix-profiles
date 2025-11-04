@@ -1,0 +1,2 @@
+# Enable typec PD wakeup
+ACTION=="add", DRIVER=="rts5453h", TEST=="power/wakeup", ATTR{power/wakeup}="enabled"
