@@ -1,0 +1,10 @@
+#!/bin/sh
+
+case $1 in
+  pre)
+    echo enabled | tee /sys/bus/platform/drivers/cdns-usbssp/*/power/wakeup
+    ;;
+  post)
+    echo disabled | tee /sys/bus/platform/drivers/cdns-usbssp/*/power/wakeup
+    ;;
+esac
