@@ -11,15 +11,10 @@ Build-Depends: debhelper (>=12~),
 Package: task-cix-chromium
 Architecture: all
 Priority: optional
-Depends: chromium,
+Depends: chromium-cix,
          ${misc:Depends},
-Provides: chromium-sandbox,
-          chromium-common (= 142.0.7444.59-1~deb12u1),
-Replaces: chromium-common (= 142.0.7444.59-1~deb12u1),
-Conflicts: chromium-common (= 142.0.7444.59-1~deb12u1),
-Description: Metapackages for CIX Chromium port
- This package provides CIX Chromium port and
- several important dependencies.
+Description: Metapackages for CIX Chromium
+ This package provides CIX Chromium.
 
 Package: task-cix-drm
 Architecture: all
