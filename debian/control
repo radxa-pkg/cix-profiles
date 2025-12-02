@@ -65,6 +65,7 @@ Priority: optional
 Depends: cix-isp-driver,
          cix-isp-driver-v4l2,
          cix-csidma-driver,
+         task-cix-drm,
          ${misc:Depends},
 Recommends: cix-isp-umd,
 Description: Metapackages for CIX ISP
