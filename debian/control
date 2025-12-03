@@ -86,14 +86,14 @@ Architecture: all
 Priority: optional
 Depends: cix-drivers-dkms,
          cix-common-misc,
+         task-cix-isp,
+         task-cix-gpu,
+         task-cix-npu,
+         task-cix-vpu,
+         task-cix-chromium,
+         task-cix-gstreamer,
+         irqbalance,
          ${misc:Depends},
-Recommends: task-cix-isp,
-            task-cix-gpu,
-            task-cix-npu,
-            task-cix-vpu,
-            task-cix-chromium,
-            task-cix-gstreamer,
-            irqbalance,
 Description: Metapackages for common CD8180 vendor packages
  This package provides prebuilt packages from Cix that
  provides a more optimized user experience.
