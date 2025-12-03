@@ -51,22 +51,22 @@ Architecture: all
 Priority: optional
 Depends: cix-llama-cpp,
          cix-mnn,
+         cix-noe-umd,
          cix-npu-onnxruntime,
          cix-npu-driver,
          ${misc:Depends},
-Recommends: cix-noe-umd,
-            cix-npu-umd,
+Recommends: cix-npu-umd,
 Description: Metapackages for CIX NPU
  This package provides CIX NPU.
 
 Package: task-cix-isp
 Architecture: all
 Priority: optional
-Depends: cix-isp-driver-v4l2 | cix-isp-driver,
-         cix-csidma-driver,
+Depends: cix-csidma-driver,
+         cix-isp-driver-v4l2 | cix-isp-driver,
+         cix-isp-umd,
          task-cix-drm,
          ${misc:Depends},
-Recommends: cix-isp-umd,
 Description: Metapackages for CIX ISP
  This package provides CIX ISP.
 
