@@ -12,7 +12,9 @@ Package: task-cix-chromium
 Architecture: all
 Priority: optional
 Depends: chromium-cix,
+         chromium-common-cix,
          ${misc:Depends},
+Provides: chromium-sandbox
 Description: Metapackages for CIX Chromium
  This package provides CIX Chromium.
 
