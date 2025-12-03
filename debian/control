@@ -62,8 +62,7 @@ Description: Metapackages for CIX NPU
 Package: task-cix-isp
 Architecture: all
 Priority: optional
-Depends: cix-isp-driver,
-         cix-isp-driver-v4l2,
+Depends: cix-isp-driver-v4l2 | cix-isp-driver,
          cix-csidma-driver,
          task-cix-drm,
          ${misc:Depends},
