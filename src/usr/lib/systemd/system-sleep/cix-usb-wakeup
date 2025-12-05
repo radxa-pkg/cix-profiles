@@ -1,10 +1,34 @@
 #!/bin/sh
 
+# The wakeup functionality of the usb controllers mentioned in the file
+# /usr/lib/radxa/usb-wakeup-mask/$(board) will not be enabled
+if [ -f /sys/devices/virtual/dmi/id/board_name ]; then
+    board=$(cat /sys/devices/virtual/dmi/id/board_name)
+else
+    exit 1
+fi
+
+# If the file /usr/lib/radxa/usb-wakeup-mask/$(board) does not exist, we
+# set all the USB controllers.
 case $1 in
   pre)
-    echo enabled | tee /sys/bus/platform/drivers/cdns-usbssp/*/power/wakeup
+    if [ -r /usr/lib/radxa/usb-wakeup-mask/"$board" ]; then
+	echo enabled | tee\
+	    $(ls /sys/bus/platform/drivers/cdns-usbssp/*/power/wakeup |\
+	    grep -v -f /usr/lib/radxa/usb-wakeup-mask/"$board")
+    else
+	echo enabled | tee\
+	    /sys/bus/platform/drivers/cdns-usbssp/*/power/wakeup
+    fi
     ;;
   post)
-    echo disabled | tee /sys/bus/platform/drivers/cdns-usbssp/*/power/wakeup
+    if [ -r /usr/lib/radxa/usb-wakeup-mask/"$board" ]; then
+	echo disabled | tee\
+	    $(ls /sys/bus/platform/drivers/cdns-usbssp/*/power/wakeup |\
+	    grep -v -f /usr/lib/radxa/usb-wakeup-mask/"$board")
+    else
+	echo disabled | tee\
+	    /sys/bus/platform/drivers/cdns-usbssp/*/power/wakeup
+    fi
     ;;
 esac
