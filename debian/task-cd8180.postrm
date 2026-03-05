@@ -1,0 +1,19 @@
+#!/bin/sh
+set -e
+
+#DEBHELPER#
+
+case $1 in
+    remove)
+        conflicts="
+        /usr/lib/modprobe.d/panfrost.conf
+        "
+        for i in $conflicts; do
+            if [ "$(dpkg-divert --listpackage "$i")" = "task-cd8180" ]; then
+                dpkg-divert --package task-cd8180 --rename --remove "$i"
+            fi
+        done
+        ;;
+esac
+
+exit 0
