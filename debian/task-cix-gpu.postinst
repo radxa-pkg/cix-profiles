@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure|triggered)
+        cpp -P -E /opt/cixgpu-compat/app.json.bak > /opt/cixgpu-compat/app.json.tmp
+        jq -es '.[0].swrast.apps += .[1].swrast.apps | .[0]' \
+            /opt/cixgpu-compat/app.json.tmp \
+            /usr/share/task-cix-gpu/radxa.json \
+            > /opt/cixgpu-compat/app.json
+        rm /opt/cixgpu-compat/app.json.tmp
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0

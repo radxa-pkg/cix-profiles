@@ -44,6 +44,8 @@ Depends: cix-gpu-umd,
          cix-mesa,
          cix-libglvnd,
          cix-gpu-driver,
+         cpp,
+         jq,
          ${misc:Depends},
 Description: Metapackages for CIX GPU
  This package provides CIX GPU.

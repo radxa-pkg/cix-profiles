@@ -1,0 +1,8 @@
+{
+  "swrast": {
+    "enable": true,
+    "apps": [
+      "gnome-control-center-goa-helper"
+    ]
+  }
+}

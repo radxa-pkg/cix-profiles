@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+case $1 in
+    install|upgrade)
+        conflicts="/opt/cixgpu-compat/app.json"
+        for i in $conflicts
+        do
+            dpkg-divert --package task-cix-gpu --divert "$i.bak" --rename "$i"
+        done
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0
