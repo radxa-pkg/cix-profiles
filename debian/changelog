@@ -1,3 +1,12 @@
+cix-profiles (0.3.10) noble; urgency=medium
+
+  [ ZHANG Yuntian ]
+  * Add new release entries to pkg.conf.template
+  * Fix syntax error in pkg.conf.template
+  * fix: remove nonexistent path
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Fri, 17 Jul 2026 09:19:25 +0000
+
 cix-profiles (0.3.9) noble; urgency=medium
 
   [ ZHANG Yuntian ]
