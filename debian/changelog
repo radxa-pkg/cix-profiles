@@ -1,3 +1,13 @@
+cix-profiles (0.3.9) noble; urgency=medium
+
+  [ ZHANG Yuntian ]
+  * fix: add pkg.conf.template
+  * fix: GNOME account wizard needs software rendering
+  * chore: add 26Q2 configs
+  * fix: mask cix-audio-codec service
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Fri, 17 Jul 2026 06:49:12 +0000
+
 cix-profiles (0.3.8) noble; urgency=medium
 
   [ ZHANG Yuntian ]
