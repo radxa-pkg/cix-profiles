@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    remove|upgrade)
+        deb-systemd-helper unmask cix-audio-codec.service
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0

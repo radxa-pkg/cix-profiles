@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure|triggered)
+        # This service install bad ALSA UCM config on O6N
+        deb-systemd-helper mask cix-audio-codec.service
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0
