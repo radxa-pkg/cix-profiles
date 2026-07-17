@@ -1,6 +1,8 @@
 {
   "*": {
     "Releases": [
+      "cd8180-bookworm",
+      "cd8180-bookworm-test"，
       "cd8180-trixie",
       "cd8180-trixie-test"
     ]
